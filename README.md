@@ -11,6 +11,7 @@ Ideally, when a new search is made the list is reset.  It should scroll to the t
 When Clean Detail is on the CleanDetailView is used.  When Clean Detail is off the MessyDetailView is used.
 
 A simple "List" won't work at all:
+```
     NavigationView {
         List(mainData, id: \.self) { stringData in
             NavigationLink(destination: DetailView(detailText: stringData)) {
@@ -20,6 +21,6 @@ A simple "List" won't work at all:
     }
     "stringData" is not a "@State" object, so it is not automatically refreshed.
     And DetailView is never updated until a row is tapped.
-
+```
 Tested on Simulator iPhone 11 Pro Max rotated to landscape and Simulator iPads in any rotation.
 Also tested on physical iPhone XS Max rotated to landscape.
